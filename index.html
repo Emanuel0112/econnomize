@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rede Enconnomize - Marketing • Comercial • Segurança</title>
+  
+  <!-- CSS Embutido diretamente no HTML para não depender de arquivo externo -->
+  <style>
+    /* --- RESET E CONFIGURAÇÕES GERAIS --- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background-color: #000000 !important; /* FORÇA o fundo a ser preto absoluto */
+      color: #ffffff; /* Texto geral em branco */
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    /* --- CABEÇALHO --- */
+    header {
+      background-color: #080808; /* Tom quase preto para destaque */
+      text-align: center;
+      padding: 40px 20px;
+      border-bottom: 2px solid #D4AF37; /* Linha de destaque dourada */
+    }
+
+    header img {
+      max-width: 320px;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    /* --- TÍTULOS E CORES (FIEL AO LOGO) --- */
+    /* Títulos em Dourado Fiel (#D4AF37) */
+    h1, h2, h3, h4 {
+      color: #D4AF37 !important;
+      margin-top: 15px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-top: 20px;
+    }
+
+    h2 {
+      font-size: 26px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    h4 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    /* --- SUBTÍTULOS E PARÁGRAFOS VERMELHOS (FIEL AO LOGO #D32F2F) --- */
+    p, .subtitle, header p {
+      color: #D32F2F !important;
+      margin-top: 5px;
+      font-weight: normal;
+    }
+
+    header p {
+      font-size: 18px;
+    }
+
+    /* --- SEÇÃO DE SERVIÇOS (LAYOUT E TAMANHO) --- */
+    .services-container {
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .services-grid {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 40px;
+      text-align: center;
+    }
+
+    .service-card {
+      flex: 1;
+      min-width: 300px; /* Garante que os cards não fiquem muito pequenos */
+      padding: 20px;
+      background-color: #080808;
+      border-radius: 8px;
+      border: 1px solid #1a1a1a;
+      transition: transform 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-3px);
+      border-color: #D4AF37;
+    }
+
+    /* --- CALL TO ACTION (CTA) --- */
+    .cta-section {
+      text-align: center;
+      padding: 70px 20px;
+      background-color: #080808;
+      border-top: 2px solid #D4AF37;
+      margin-top: auto;
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    /* BOTÕES DOURADOS DO CTA (TAMANHO E COR) */
+    .btn-custom {
+      background-color: #D4AF37 !important; /* Dourado */
+      color: #000000 !important; /* Texto preto para legibilidade */
+      font-weight: bold;
+      border: 1px solid #D4AF37;
+      padding: 14px 30px;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+
+    .btn-custom:hover {
+      background-color: #B8860B !important; /* Dourado escuro no hover */
+      border-color: #B8860B !important;
+      color: #ffffff !important; /* Texto branco no hover */
+      transform: translateY(-2px);
+    }
+
+    /* --- RODAPÉ --- */
+    footer {
+      background-color: #050505;
+      text-align: center;
+      padding: 25px;
+    }
+
+    footer p {
+      color: #D32F2F !important; /* Vermelho Fiel */
+      font-size: 14px;
+    }
+
+    /* --- BOTÕES FLUTUANTES (ORGANIZAÇÃO E ÍCONES SVG INLINE) --- */
+    .floating-container {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      z-index: 9999;
+    }
+
+    .floating-btn {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      text-decoration: none;
+    }
+
+    .floating-btn:hover {
+      transform: scale(1.1);
+    }
+
+    .floating-btn svg {
+      width: 32px;
+      height: 32px;
+      fill: #ffffff;
+    }
+
+    /* WhatsApp (Verde Oficial) */
+    .whatsapp-float {
+      background-color: #25D366 !important;
+    }
+
+    /* Instagram (Gradiente Oficial) */
+    .instagram-float {
+      background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%) !important;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header>
+    <!-- Substitua pelo caminho correto da sua imagem -->
+    <img src="img/logobrc.jpeg" alt="Logo Rede Enconnomize">
+    <h1>Rede Enconnomize</h1>
+    <p class="subtitle">Marketing • Comercial • Segurança</p>
+  </header>
+
+  <!-- Seção de Serviços -->
+  <main class="services-container">
+    <h2>Nossos Serviços</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <h4>Marketing Digital</h4>
+        <p>Gestão completa das redes sociais e campanhas estratégicas.</p>
+      </div>
+      <div class="service-card">
+        <h4>Comercial</h4>
+        <p>Networking, prospecção de clientes e estratégias de vendas.</p>
+      </div>
+      <div class="service-card">
+        <h4>Segurança</h4>
+        <p>Parcerias oficiais e soluções inteligentes para empresas.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Call to Action -->
+  <section class="cta-section">
+    <h2>Fortaleça sua marca conosco!</h2>
+    <p class="subtitle">Entre em contato e faça parte da nossa rede.</p>
+    
+    <div class="cta-buttons">
+      <button class="btn-custom" onclick="abrirInstagram()">Siga no Instagram</button>
+      <button class="btn-custom" onclick="abrirWhatsApp()">Fale pelo WhatsApp</button>
+      <button class="btn-custom" onclick="mostrarAlerta()">Clique aqui</button>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2026 Rede Enconnomize - Conectando empresas, fortalecendo negócios</p>
+  </footer>
+
+  <!-- Botões Flutuantes (Canto Inferior Direito) com Ícones SVG Embutidos -->
+  <div class="floating-container">
+    <!-- WhatsApp (Primeiro, mais abaixo) -->
+    <a href="javascript:void(0)" onclick="abrirWhatsApp()" class="floating-btn whatsapp-float" title="WhatsApp">
+      <svg viewBox="0 0 24 24">
+        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+      </svg>
+    </a>
+    <!-- Instagram (Segundo, acima) -->
+    <a href="javascript:void(0)" onclick="abrirInstagram()" class="floating-btn instagram-float" title="Instagram">
+      <svg viewBox="0 0 24 24">
+        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+      </svg>
+    </a>
+  </div>
+
+  <!-- JavaScript Embutido diretamente no HTML para não depender de arquivo externo -->
+  <script>
+    console.log("Bem-vindo à Rede Enconnomize!");
+
+    function abrirWhatsApp() {
+      // Abre o WhatsApp com o link wa.me/message oficial
+      window.open("https://wa.me/message/2EZZLYQORZS3I1", "_blank");
+    }
+
+    function abrirInstagram() {
+      // Abre o Instagram oficial
+      window.open("https://www.instagram.com/encon.nomize?igsh=ZTB3cWhkamM5c2w2", "_blank");
+    }
+
+    function mostrarAlerta() {
+      // Alerta simples para o terceiro botão
+      alert("Obrigado por entrar em contato com a Rede Enconnomize!");
+    }
+  </script>
+</body>
+</html>

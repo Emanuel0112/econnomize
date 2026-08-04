@@ -1,0 +1,168 @@
+/* --- RESET E CONFIGURAÇÕES GERAIS --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif; /* Fonte padrão, limpa */
+}
+
+body {
+  background-color: #000000 !important; /* FORÇA o fundo a ser preto absoluto */
+  color: #ffffff; /* Texto geral em branco */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- TÍTULOS E CORES (FIEL AO LOGO) --- */
+/* Títulos em Dourado Fiel (#D4AF37) */
+h1, h2, h3, h4 {
+  color: #D4AF37 !important;
+  font-weight: bold;
+}
+
+/* Subtítulos e Parágrafos em Vermelho Fiel (#D32F2F) */
+p, .subtitle, header p {
+  color: #D32F2F !important;
+}
+
+/* --- CABEÇALHO --- */
+header {
+  background-color: #080808; /* Um tom acima do preto para profundidade */
+  text-align: center;
+  padding: 40px 20px;
+  border-bottom: 2px solid #D4AF37; /* Linha de destaque dourada */
+}
+
+header img {
+  max-width: 320px;
+  height: auto;
+  border-radius: 8px;
+}
+
+h1 {
+  font-size: 32px;
+  margin-top: 20px;
+}
+
+header p {
+  font-size: 18px;
+}
+
+/* --- SEÇÃO DE SERVIÇOS (LAYOUT E TAMANHO) --- */
+.services-container {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.services-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 40px;
+  text-align: center;
+}
+
+.service-card {
+  flex: 1;
+  min-width: 300px; /* Garante que os cards não fiquem muito pequenos */
+  padding: 20px;
+  background-color: #080808;
+  border-radius: 8px;
+  border: 1px solid #1a1a1a;
+}
+
+/* --- CALL TO ACTION (CTA) --- */
+.cta-section {
+  text-align: center;
+  padding: 70px 20px;
+  background-color: #080808;
+  border-top: 2px solid #D4AF37;
+  margin-top: auto;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+/* BOTÕES DOURADOS DO CTA (TAMANHO E COR) */
+.btn-custom {
+  background-color: #D4AF37 !important; /* Dourado */
+  color: #000000 !important; /* Texto preto para legibilidade */
+  font-weight: bold;
+  border: 1px solid #D4AF37;
+  padding: 14px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+  background-color: #B8860B !important; /* Dourado escuro no hover */
+  border-color: #B8860B !important;
+  color: #ffffff !important; /* Texto branco no hover */
+  transform: translateY(-2px);
+}
+
+/* --- RODAPÉ --- */
+footer {
+  background-color: #050505;
+  text-align: center;
+  padding: 25px;
+}
+
+footer p {
+  color: #D32F2F !important; /* Vermelho Fiel */
+  font-size: 14px;
+}
+
+/* --- BOTÕES FLUTUANTES (ORGANIZAÇÃO E ÍCONES) --- */
+.floating-container {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 9999;
+}
+
+.floating-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  text-decoration: none;
+}
+
+.floating-btn:hover {
+  transform: scale(1.1);
+}
+
+.floating-btn svg {
+  width: 32px;
+  height: 32px;
+  fill: #ffffff;
+}
+
+/* WhatsApp (Verde Oficial e Ícone SVG Inline) */
+.whatsapp-float {
+  background-color: #25D366 !important;
+}
+
+/* Instagram (Gradiente Oficial e Ícone SVG Inline) */
+.instagram-float {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%) !important;
+}
