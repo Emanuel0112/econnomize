@@ -121,6 +121,79 @@
       flex-wrap: wrap;
       margin-top: 30px;
     }
+    /* =============================================
+   ESTILOS PARA A SEÇÃO SOBRE NÓS
+   ============================================= */
+
+/* Espaçamento geral da seção */
+.about-section {
+  padding: 80px 0;
+  background-color: #000000; /* Fundo Preto absoluto */
+}
+
+/* Container para centralizar o conteúdo */
+.about-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Grid para as duas colunas */
+.about-grid {
+  display: flex;
+  gap: 50px;
+  align-items: flex-start;
+  flex-wrap: wrap; /* Garante responsividade em celulares */
+}
+
+/* Coluna de conteúdo principal */
+.about-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* Título Dourado Fiel */
+.about-section .section-title {
+  font-size: 36px;
+  color: #D4AF37 !important;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Texto Vermelho Fiel */
+.about-section .subtitle, 
+.highlight-item p {
+  color: #D32F2F !important;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+/* Coluna de destaques (Missão/Visão) */
+.about-highlights {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* Itens de destaque */
+.highlight-item {
+  background-color: #080808; /* Um tom acima do preto para destaque */
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #1a1a1a;
+}
+
+/* Títulos dos destaques em Dourado Fiel */
+.highlight-item h4 {
+  color: #D4AF37 !important;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+
 
     /* BOTÕES DOURADOS DO CTA (TAMANHO E COR) */
     .btn-custom {
@@ -209,6 +282,41 @@
     <h1>Rede Enconnomize</h1>
     <p class="subtitle">Marketing • Comercial • Segurança</p>
   </header>
+
+  <!-- =============================================
+     NOVA SEÇÃO: SOBRE NÓS
+     Adicionada profissionalmente entre o Header e Serviços
+     ============================================= -->
+<section class="about-section">
+  <div class="container">
+    <div class="about-grid">
+      
+      <!-- Coluna 1: Título e Texto Principal -->
+      <div class="about-content">
+        <h2 class="section-title">Sobre Nós</h2>
+        <p class="subtitle">
+          A Rede Enconnomize nasceu da visão de conectar empresas e simplificar processos. Somos mais que uma consultoria; somos parceiros estratégicos focados em impulsionar o crescimento sustentável do seu negócio através da integração inteligente de Marketing, Comercial e Segurança.
+        </p>
+      </div>
+
+      <!-- Coluna 2: Missão e Valores (Ou uma imagem, se preferir) -->
+      <div class="about-highlights">
+        <div class="highlight-item">
+          <h4>Nossa Missão</h4>
+          <p>Potencializar o sucesso de nossos parceiros através de conexões fortes e soluções eficientes.</p>
+        </div>
+        <div class="highlight-item">
+          <h4>Nossa Visão</h4>
+          <p>Ser a maior rede de conexões empresariais, reconhecida pela inovação e resultados garantidos.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- =============================================
+     FIM DA SEÇÃO SOBRE NÓS
+     ============================================= -->
 
   <!-- Seção de Serviços -->
   <main class="services-container">
